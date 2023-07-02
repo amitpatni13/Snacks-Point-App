@@ -1,0 +1,116 @@
+body {
+    background-color: #f8f9fa;
+}
+.navbar, .food-items {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-logo {
+    padding: 10px;
+    width: 80%;
+}
+.round-logo {
+    background-color: white;
+    border-radius: 50%;
+}
+.sidebar-logo>img {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 14px;
+}
+.sidebar-item, .food-item {
+    cursor: pointer;
+    margin-top: 1.6vh;
+    margin-left: 1.6vw;
+    width: 100%;
+    text-align: left;
+}
+.sidebar-item {
+    margin-left: 5vw !important;
+}
+.sidebar-item>a {
+    text-decoration: none;
+    color: grey;
+}
+.sidebar-item>a:hover {
+    text-decoration: underline;
+}
+.sidebar-item:hover, .food-item:hover {
+    background-color: #e4e0e0;
+}
+.header {
+    margin: 3vh 0 5vh 0;
+    cursor: pointer;
+}
+.header-item {
+    border: 1px solid #f8256b;
+    border-radius: 20px;
+    margin-left: 20px;
+    color: #f8256b;
+    font-size: 16px;
+    width: auto;
+}
+.hunt-title {
+    color: #ff869a;
+    font-weight: bold;
+    font-family: cursive;
+}
+.food-item-card {
+    background-color: #ffdae1;
+    margin: 1vh 1vw;
+}
+.food-item>img {
+    width: 3.5vw;
+}
+.yellow-line {
+    border: 2px solid #f88b25;
+    width: 5.5vw;
+}
+.menu {
+    margin-top: 5vh;
+}
+.menu-category {
+    color: #f88b25;
+    font-weight: bold;
+    font-family: cursive;
+}
+.food-item-logo {
+    width: 10vw;
+    margin: auto;
+}
+.rating-card {
+    border-radius: 20px;
+    margin-left: 20px;
+    color: #f88b25;
+    background-color: #070707;
+    font-size: 16px;
+    width: auto;
+    padding: 0.4vh 0.7vw;
+    margin: 1.5vh 0 0 1vw;
+}
+.add-to-cart-logo {
+    padding: 0.3vh 0.5vw;
+    margin: 1.5vh 1vw 0 0;
+    width: auto;
+}
+.item-in-cart {
+    background-color: #f88b25;
+    color: white;
+}
+.card-header-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.cart-img-logo {
+    width: 5vw;
+    margin: auto;
+}

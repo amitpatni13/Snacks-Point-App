@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks Point App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="row">
+
+        <!-- Left Sidebar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light col-md-2">
+            <div class="sidebar-logo round-logo">
+                <img src="assets/images/snacks-point-logo.png" alt="logo..." />
+            </div>
+            <div class="sidebar-item">
+                <a href="#">About</a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#">Services</a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#">Your Orders</a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#">Wishlists</a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#">Cart</a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#">Checkout</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <section class="hero col-md-8">
+            <div class="main">
+                <div class="header row">
+                    <div class="header-item col-md-2">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        <span>Search</span>
+                    </div>
+                    <div class="header-item col-md-2">
+                        <i class="fa-solid fa-tag"></i>
+                        <span>Offers</span>
+                    </div>
+                    <div class="header-item col-md-2" onclick="displayCart()">
+                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                        <span id="total-cart-items"></span>
+                        <span>Items</span>
+
+                    </div>
+                </div>
+                <h2 class="menu-category" id="menu-category">Pizza</h2>
+                <div class="menu container row" id="menu-card">
+                    <!-- HTML is dynamically inserted from JavaScript here based on title -->
+                    <!-- <div class="card food-item-card col-md-3">
+                        <div class="row card-header-row">
+                            <div class="rating-card col-md-6">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                            <div class="add-to-cart-logo round-logo col-md-6" id="Bacon-Pizza" onclick="addItemToCart('Bacon Pizza')">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <img src="assets/images/bacon-pizza.png" class="card-img-top food-item-logo" alt="Food Logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Bacon Pizza</h5>
+                            <p class="card-text">Price: $44</p>
+                        </div>
+                    </div>  -->
+                </div>
+
+                <!-- For Displaying Cart -->
+                <!-- <div class="cart-body" id="cart-body">
+                    <h2>Items Added in Wishlist</h2>
+                    <table class="table table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price ($)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="assets/images/bacon-pizza.png" class="card-img-top food-item-logo"
+                                        alt="Food Logo">
+                                </td>
+                                <td>Chilli-paper Pizza</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets/images/bacon-pizza.png" class="card-img-top food-item-logo cart-img-logo" alt="Food Logo">
+                                </td>
+                                <td>Mushroom Pizza</td>
+                                <td>41</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>$79</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+
+            </div>
+        </section>
+
+        <!-- Right Sidebar -->
+        <section id="menu" class="menu col-md-2">
+            <div class="right-sidebar">
+                <div class="header row">
+                    <div class="header-item col-md-2">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span>Simplilearn!</span>
+                    </div>
+                </div>
+                <h2 class="hunt-title">Go for Hunt</h2>
+                <div class="yellow-line"></div>
+                <div class="food-items">
+                    <div class="food-item" onclick="updateMenu('Biryani')">
+                        <img src="assets/images/biryani.png" alt="Food Item..." />
+                        <span>Biryani</span>
+                    </div>
+                    <div class="food-item" onclick="updateMenu('Chicken')">
+                        <img src="assets/images/biryani.png" alt="Food Item..." />
+                        <span>Chicken</span>
+                    </div>
+                    <div class="food-item" onclick="updateMenu('Paneer')">
+                        <img src="assets/images/biryani.png" alt="Food Item..." />
+                        <span>Paneer</span>
+                    </div>
+                    <div class="food-item" onclick="updateMenu('Vegitable')">
+                        <img src="assets/images/biryani.png" alt="Food Item..." />
+                        <span>Vegitable</span>
+                    </div>
+                    <div class="food-item" onclick="updateMenu('Chinese')">
+                        <img src="assets/images/biryani.png" alt="Food Item..." />
+                        <span>Chinese</span>
+                    </div>
+                    <div class="food-item" onclick="updateMenu('South Indian')">
+                        <img src="assets/images/biryani.png" alt="Food Item..." />
+                        <span>South Indian</span>
+                    </div>
+                    <div class="food-item" onclick="updateMenu('Pizza')">
+                        <img src="assets/images/biryani.png" alt="Food Item..." />
+                        <span>Pizza</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-light text-center">
+        <p>&copy; 2023 Snacks Point App. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
